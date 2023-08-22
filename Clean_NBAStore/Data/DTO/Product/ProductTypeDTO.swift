@@ -12,7 +12,7 @@ enum ProductTypeDTO: Codable {
     case hat
     case pants
     case hoodie
-    case `short`
+    case short
     
     enum CodingKeys: String, CodingKey {
         case tshirt, hat, pants, hoodie, short
