@@ -4,8 +4,8 @@
         "type": "tshirt",
         "name": "LeBron James Lakers Icon Edition 2020",
         "shortDescription": "Maillot Nike NBA Swingman",
-        "description" : "Le maillot Icon Edition incarne le riche héritage de la franchise, ainsi que son identité emblématique, à travers les couleurs audacieuses de l'équipe.Le maillot Nike NBA Swingman Icon Edition des Lakers de Los Angeles s'inspire de la tenue des joueurs professionnels.Il présente une conception classique en tissu à double maille premium et une coupe qui met en valeur les supporters.Ce produit est entièrement fabriqué à partir de fibres de polyester recyclé.",
-        "price": "99.99",
+        "description" : "Le maillot Icon Edition incarne le riche héritage de la franchise, ainsi que son identité emblématique, à travers les couleurs audacieuses de l'équipe.Le maillot Nike NBA Swingman Icon Edition des Lakers de Los Angeles s'inspire de la tenue des joueurs professionnels.Il présente une conception classique en tissu à double maille premium et une coupe qui met en valeur les supporters. Ce produit est entièrement fabriqué à partir de fibres de polyester recyclé.",
+        "price": 99.99,
         "imageName": "lebronIconic"
     },
     {
@@ -13,8 +13,8 @@
         "type": "tshirt",
         "name": "Kemba Walker Celtics Icon Edition 2020",
         "shortDescription": "Maillot Nike NBA Swingman",
-        "description" : "Le maillot Icon Edition incarne le riche héritage de la franchise, ainsi que son identité emblématique, à travers les couleurs audacieuses de l'équipe.Le maillot Nike NBA Swingman Icon Edition des Celtics de Boston s'inspire de la tenue des joueurs professionnels.Il présente une conception classique en tissu à double maille premium et une coupe qui met en valeur les supporters.Ce produit est entièrement fabriqué à partir de fibres de polyester recyclé.",
-        "price": "89.99",
+        "description" : "Le maillot Icon Edition incarne le riche héritage de la franchise, ainsi que son identité emblématique, à travers les couleurs audacieuses de l'équipe.Le maillot Nike NBA Swingman Icon Edition des Celtics de Boston s'inspire de la tenue des joueurs professionnels.Il présente une conception classique en tissu à double maille premium et une coupe qui met en valeur les supporters. Ce produit est entièrement fabriqué à partir de fibres de polyester recyclé.",
+        "price": 89.99,
         "imageName": "walkerIconic"
     },
     {
@@ -22,8 +22,8 @@
         "type": "hat",
         "name": "Lauri Markkanen Bulls Icon Edition",
         "shortDescription": "Maillot Nike NBA Swingman",
-        "description" : "Le maillot Icon Edition incarne le riche héritage de la franchise, ainsi que son identité emblématique, à travers les couleurs audacieuses de l'équipe.Le maillot Nike NBA Swingman Icon Edition des Bulls de Chicago s'inspire de la tenue des joueurs professionnels.Il présente une conception classique en tissu à double maille premium et une coupe qui met en valeur les supporters.Ce produit est entièrement fabriqué à partir de fibres de polyester recyclé.",
-        "price": "39.99",
+        "description" : "Le maillot Icon Edition incarne le riche héritage de la franchise, ainsi que son identité emblématique, à travers les couleurs audacieuses de l'équipe.Le maillot Nike NBA Swingman Icon Edition des Bulls de Chicago s'inspire de la tenue des joueurs professionnels.Il présente une conception classique en tissu à double maille premium et une coupe qui met en valeur les supporters. Ce produit est entièrement fabriqué à partir de fibres de polyester recyclé.",
+        "price": 39.99,
         "imageName": "bulls"
     },
     {
@@ -31,8 +31,8 @@
         "type": "tshirt",
         "name": "Kyrie Irving Nets Icon Edition",
         "shortDescription": "Maillot Nike NBA Swingman",
-        "description" : "Le maillot Icon Edition incarne le riche héritage de la franchise, ainsi que son identité emblématique, à travers les couleurs audacieuses de l'équipe.Le maillot Nike NBA Swingman Icon Edition des Nets de Brooklyn s'inspire de la tenue des joueurs professionnels.Il présente une conception classique en tissu à double maille premium et une coupe qui met en valeur les supporters.Ce produit est entièrement fabriqué à partir de fibres de polyester recyclé.",
-        "price": "99.99",
+        "description" : "Le maillot Icon Edition incarne le riche héritage de la franchise, ainsi que son identité emblématique, à travers les couleurs audacieuses de l'équipe.Le maillot Nike NBA Swingman Icon Edition des Nets de Brooklyn s'inspire de la tenue des joueurs professionnels.Il présente une conception classique en tissu à double maille premium et une coupe qui met en valeur les supporters. Ce produit est entièrement fabriqué à partir de fibres de polyester recyclé.",
+        "price": 99.99,
         "imageName": "nets"
     },
     {
@@ -41,7 +41,7 @@
         "name": "LeBron James Lakers Statement Edition 2020",
         "shortDescription": "Maillot Nike NBA Swingman",
         "description" : "Le maillot Statement Edition ne passe pas inaperçu avec ses couleurs et détails contrastés audacieux. Il symbolise la force collective, le travail d'équipe et l'esprit de compétition. Le maillot Jordan NBA Swingman Statement Edition des Lakers de Los Angeles s'inspire de la tenue des joueurs professionnels. Ce modèle est confectionné dans un tissu premium à double maille et offre une tenue décontractée et facile à porter qui conviendra à tous les supporters. Ce produit est entièrement fabriqué à partir de fibres de polyester recyclé.",
-        "price": "89.99",
+        "price": 89.99,
         "imageName": "lebronStatement"
     },
     {
@@ -50,7 +50,7 @@
         "name": "Miami Heat City Edition",
         "shortDescription": "Maillot Nike NBA Swingman",
         "description" : "Le maillot Nike NBA Swingman City Edition du Heat de Miami pour la saison 2020-21 rend hommage à l'histoire de la tenue tout en se tournant vers le futur de la ville. S'inspirant de ses prédécesseurs colorés, la dernière version arbore un dégradé horizontal qui mélange le fuchsia laser signature de l'équipe à des tons bleus pour intégrer du violet à la palette de couleurs du Heat. Le résultat ? Un design unique à double face, créant deux tenues en une en fonction de l'angle sous lequel on la regarde.",
-        "price": "79.99",
+        "price": 79.99,
         "imageName": "heat"
     },
     {
@@ -58,8 +58,8 @@
         "type": "short",
         "name": "Golden State Warriors Icon Edition",
         "shortDescription": "Short Nike NBA Swingman pour Homme",
-        "description" : "Inspiré du short authentique de la NBA, le short Nike NBA Swingman Icon Edition des Warriors de Golden State intègre un tissu anti-transpiration avec des détails rappelant le look de votre équipe préférée sur le terrain.Les poches latérales vous permettent de ranger facilement vos objets essentiels.Ce produit est entièrement fabriqué à partir de fibres de polyester recyclé.Ce produit est entièrement fabriqué à partir de fibres de polyester recyclé.",
-        "price": "19.99",
+        "description" : "Inspiré du short authentique de la NBA, le short Nike NBA Swingman Icon Edition des Warriors de Golden State intègre un tissu anti-transpiration avec des détails rappelant le look de votre équipe préférée sur le terrain.Les poches latérales vous permettent de ranger facilement vos objets essentiels.Ce produit est entièrement fabriqué à partir de fibres de polyester recyclé. Ce produit est entièrement fabriqué à partir de fibres de polyester recyclé.",
+        "price": 19.99,
         "imageName": "goldenState"
     },
     {
@@ -68,7 +68,7 @@
         "name": "Collection NBA Nike x AMBUSH",
         "shortDescription": "Haut à manches longues Lakers",
         "description" : "La nouvelle collection de vêtements Nike x AMBUSH rend hommage au style intemporel, à la passion et à l'état d'esprit des joueurs et des fans de basketball. Inspirée des looks rétro et de la fougue des communautés qui animent le sport et la mode, la fondatrice d'Ambush, Yoon Ahn, a conçu deux looks complets pour Femme en s'appropriant les codes des Lakers de Los Angeles et des Nets de Brooklyn. Ces vêtements aux couleurs des deux équipes sont accompagnés de la Nike Dunk High et d'un ballon de basketball fluo.",
-        "price": "249.99",
+        "price": 249.99,
         "imageName": "ambush"
     },
     {
@@ -77,7 +77,7 @@
         "name": "Chicago Bulls Essential",
         "shortDescription": "Sweat à capuche Nike NBA pour Adulte",
         "description" : "Dans les tribunes comme au quotidien, soutenez votre équipe avec le sweat à capuche Nike NBA Chicago Bulls. Fabriqué dans un tissu brossé et doux, il offre une chaleur optimale et un style décontracté. Il peut facilement être porté sous une veste.",
-        "price": "59.99",
+        "price": 59.99,
         "imageName": "bullsHoodie"
     },
     {
@@ -86,7 +86,7 @@
         "name": "Los Angeles Lakers Showtime City Edition",
         "shortDescription": "Pantalon Nike Therma Flex NBA pour Homme",
         "description" : "Incontournable de l'échauffement, le pantalon Nike Therma Flex Los Angeles Lakers Showtime est assorti au maillot City Edition de l'équipe. Il est conçu en Fleece doux et extensible pour vous maintenir au chaud et vous offrir une plus grande liberté de mouvement. Le pantalon affiche des détails revisités et une coupe décontractée pour un confort optimal au quotidien.",
-        "price": "99.99",
+        "price": 99.99,
         "imageName": "lakersPants"
     }
 ]

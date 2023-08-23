@@ -11,7 +11,7 @@ import SwiftUI
 struct Clean_NBAStoreApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NBAStoreTabView()
         }
     }
 }
