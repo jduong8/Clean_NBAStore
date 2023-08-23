@@ -15,7 +15,9 @@ struct Product: Identifiable, Hashable {
     var description: String
     var price: Double
     var imageName: String
-    
+}
+
+extension Product {
     static let mockProduct: Product = .init(
         id: 50000,
         type: .tshirt,

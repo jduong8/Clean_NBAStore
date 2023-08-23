@@ -11,7 +11,8 @@ class CartViewModel: ObservableObject, CartManager {
     
     @Published var purchases: [Purchase] = []
     @Published var purchase: Purchase = .mockPurchase
-    
+
+     // MARK: - Function
     func addToCard(for purchase: Purchase) {
         if let index = purchases.firstIndex(where: { $0.product.id == purchase.product.id && $0.size == purchase.size }) {
             let oldPurchase = purchases.first { $0.product.id == purchase.product.id && $0.size == purchase.size }!
@@ -24,12 +25,22 @@ class CartViewModel: ObservableObject, CartManager {
     }
 }
 
-// MARK: - Product
+// MARK: - Display price and quantity
 extension CartViewModel {
     var totalPrice: Double {
         self.purchases.map({ $0.product.price }).reduce(0, +)
     }
     var productQuantity: Int {
         self.purchases.map({ $0.quantity }).reduce(0, +)
+    }
+}
+// MARK: - Quantity Selector
+extension CartViewModel {
+    var isMinusEnabled: Bool {
+        self.purchase.quantity > 1
+    }
+    
+    var isPlusEnabled: Bool {
+        self.purchase.quantity < 10
     }
 }

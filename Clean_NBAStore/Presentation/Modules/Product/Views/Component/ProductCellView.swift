@@ -10,13 +10,16 @@ import SwiftUI
 struct ProductCellView: View {
 
     let product: Product
+    private var price: String {
+        getEUPrice(product.price)
+    }
 
     var body: some View {
         VStack {
             Image(product.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-            VStack (alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 4) {
                 Text(product.name)
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
@@ -25,7 +28,7 @@ struct ProductCellView: View {
                 Text("6 Tailles")
                     .foregroundColor(.gray)
                 Spacer()
-                Text("\(product.price, specifier: "%.2f") €")
+                Text("\(price)")
                     .foregroundColor(.black)
             }
         }

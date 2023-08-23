@@ -11,15 +11,16 @@ class ProductListViewModel: ObservableObject {
     
     private let productRepository: ProductRepository
     
+    // MARK: - Computed Properties
     var products: [Product] {
         do {
-            let products = try productRepository.getAllProducts()
-            return products
+            return try productRepository.getAllProducts()
         } catch {
             return []
         }
     }
     
+    // MARK: - Initializer
     init(productRepository: ProductRepository = ProductRepositoryDefault()) {
         self.productRepository = productRepository
     }

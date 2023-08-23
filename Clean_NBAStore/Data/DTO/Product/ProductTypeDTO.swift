@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ProductTypeDTO: Codable {
+enum ProductTypeDTO: Decodable {
     case tshirt
     case hat
     case pants
@@ -40,23 +40,6 @@ enum ProductTypeDTO: Codable {
                     debugDescription: "Unable to decode ProductTypeDTO"
                 )
                )
-        }
-    }
-    
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        
-        switch self {
-        case .tshirt:
-            try container.encode("tshirt")
-        case .hat:
-            try container.encode("hat")
-        case .pants:
-            try container.encode("pants")
-        case .hoodie:
-            try container.encode("hoodie")
-        case .short:
-            try container.encode("short")
         }
     }
 }

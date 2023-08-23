@@ -17,7 +17,7 @@ class ProductRepositoryDefault: ProductRepository {
     
     func getAllProducts() throws -> [Product] {
         return try self.api.getProductsData().map {
-            try .init(with: $0)
+            try Product(with: $0)
         }
     }
 }

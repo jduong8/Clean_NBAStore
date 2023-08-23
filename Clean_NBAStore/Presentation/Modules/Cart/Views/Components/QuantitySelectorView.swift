@@ -9,17 +9,15 @@ import SwiftUI
 
 struct QuantitySelectorView: View {
     
-    // MARK: - Properties
-    @Binding var quantity: Int
-//    @ObservedObject var cartViewModel: CartViewModel
-    
+    @Binding var purchase: Purchase
+
     // MARK: - Computed Properties
     var isMinusEnabled: Bool {
-        self.quantity > 1
+        self.purchase.quantity > 1
     }
     
     var isPlusEnabled: Bool {
-        self.quantity < 10
+        self.purchase.quantity < 10
     }
     
     // MARK: - Body
@@ -34,7 +32,7 @@ struct QuantitySelectorView: View {
 
 struct QuantitySelectorView_Previews: PreviewProvider {
     static var previews: some View {
-        QuantitySelectorView(quantity: .constant(1))
+        QuantitySelectorView(purchase: .constant(.mockPurchase))
     }
 }
 
@@ -56,7 +54,7 @@ private extension QuantitySelectorView {
     }
     
     var quantityText: some View {
-        Text("\(self.quantity)")
+        Text("\(self.purchase.quantity)")
     }
 }
 
@@ -64,10 +62,10 @@ private extension QuantitySelectorView {
 private extension QuantitySelectorView {
     
     func decrementQuantity() {
-        self.quantity = max(self.quantity - 1, 1)
+        self.purchase.quantity = max(self.purchase.quantity - 1, 1)
     }
     
     func incrementQuantity() {
-        self.quantity = min(self.quantity + 1, 10)
+        self.purchase.quantity = min(self.purchase.quantity + 1, 10)
     }
 }

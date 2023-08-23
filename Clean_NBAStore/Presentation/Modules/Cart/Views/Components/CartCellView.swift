@@ -30,7 +30,7 @@ struct CartCellView: View {
                 Text("Size : \(purchase.size.rawValue.uppercased())")
                     .foregroundColor(.black)
                     .opacity(0.3)
-                QuantitySelectorView(quantity: $purchase.quantity)
+                QuantitySelectorView(purchase: $purchase)
                 Text("\(totalPrice, specifier: "%.2f") €")
                     .foregroundColor(.black)
             }

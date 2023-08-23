@@ -12,7 +12,9 @@ struct Purchase: Identifiable {
     var quantity: Int = 1
     let product: Product
     var size: ProductSize
-    
+}
+
+extension Purchase {
     static let mockPurchase = Purchase(
         product: Product(
             id: 1,

@@ -14,7 +14,7 @@ struct ProductDetailView: View {
     @EnvironmentObject var cartViewModel: CartViewModel
     
     private var price: String {
-        getPrice(self.product.price)
+        getEUPrice(self.product.price)
     }
     
     var body: some View {
@@ -34,29 +34,8 @@ struct ProductDetailView: View {
                 }
             }
             .padding()
-            
-            Picker("Size", selection: $selectedSize) {
-                ForEach(ProductSize.allCases) { size in
-                    Text(size.rawValue.uppercased())
-                        .tag(size)
-                }
-            }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding()
-
-            Button {
-                self.cartViewModel.addToCard(for: Purchase(product: product, size: selectedSize))
-            } label: {
-                Text("Buy in size \(selectedSize.rawValue.uppercased()) : \(price)")
-                    .font(.title2)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.black)
-                    .cornerRadius(5)
-            }
-            .padding(.horizontal)
+            pickerSizeView
+            orderButton
         }
     }
 }
@@ -70,12 +49,32 @@ struct ProductDetailView_Previews: PreviewProvider {
     }
 }
 
+// MARK: - SubView
 extension ProductDetailView {
-    func getPrice(_ value: Double) -> String {
-        let format = NumberFormatter()
-        format.numberStyle = .currency
-        format.locale = .init(identifier: "eu_FR_POSIX")
-        
-        return format.string(from: NSNumber(value: value)) ?? ""
+    var pickerSizeView: some View {
+        Picker("Size", selection: $selectedSize) {
+            ForEach(ProductSize.allCases) { size in
+                Text(size.rawValue.uppercased())
+                    .tag(size)
+            }
+        }
+        .pickerStyle(SegmentedPickerStyle())
+        .padding()
+    }
+    
+    var orderButton: some View {
+        Button {
+            self.cartViewModel.addToCard(for: Purchase(product: product, size: selectedSize))
+        } label: {
+            Text("Buy in size \(selectedSize.rawValue.uppercased()) : \(price)")
+                .font(.title2)
+                .fontWeight(.heavy)
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.black)
+                .cornerRadius(5)
+        }
+        .padding(.horizontal)
     }
 }

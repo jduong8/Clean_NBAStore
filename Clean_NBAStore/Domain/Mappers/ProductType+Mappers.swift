@@ -8,7 +8,7 @@
 import Foundation
 
 extension ProductType {
-    init(with dtoType: ProductTypeDTO) throws {
+    init(with dtoType: ProductTypeDTO) {
         switch dtoType {
         case .tshirt:
             self = .tshirt

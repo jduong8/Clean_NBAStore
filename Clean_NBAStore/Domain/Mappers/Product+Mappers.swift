@@ -32,7 +32,7 @@ extension Product {
         }
         
         self.id = id
-        self.type = try .init(with: productTypeDTO)
+        self.type = .init(with: productTypeDTO)
         self.name = name
         self.shortDescription = shortDescription
         self.description = description
