@@ -8,10 +8,7 @@
 import Foundation
 
 protocol CartRepository {
-    func addToCart(for purchase: Purchase) throws -> [Purchase]
-    func getCart() -> [Purchase]
-}
-
-enum CartRepositoryError: Error {
-    case addToCartFailed
+    func addToCart(purchase: Purchase)
+    func removeFromCart(purchase: Purchase)
+    func getCartItems() -> [Purchase]
 }

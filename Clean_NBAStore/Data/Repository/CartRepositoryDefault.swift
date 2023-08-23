@@ -11,14 +11,24 @@ class CartRepositoryDefault: CartRepository {
     
     private var cart: [Purchase] = []
     
-    func addToCart(for purchase: Purchase) throws -> [Purchase] {
-        
-        cart.append(purchase)
-        
-        return cart
+    func addToCart(purchase: Purchase) {
+        if let index = cart.firstIndex(where: { $0.product.id == purchase.product.id && $0.size == purchase.size }) {
+            let oldPurchase = cart.first { $0.product.id == purchase.product.id && $0.size == purchase.size }!
+            let newPurchase = Purchase(quantity: oldPurchase.quantity + purchase.quantity, product: oldPurchase.product, size: oldPurchase.size)
+            cart.remove(at: index)
+            cart.append(newPurchase)
+        } else {
+            cart.append(purchase)
+        }
     }
     
-    func getCart() -> [Purchase] {
+    func removeFromCart(purchase: Purchase) {
+        if let index = cart.firstIndex(where: { $0.product.id == purchase.product.id && $0.size == purchase.size }) {
+            cart.remove(at: index)
+        }
+    }
+    
+    func getCartItems() -> [Purchase] {
         return cart
     }
 }
