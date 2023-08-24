@@ -15,12 +15,10 @@ struct CartView: View {
     }
     
     var body: some View {
-        VStack {
-            ScrollView(.vertical, showsIndicators: false) {
-                LazyVStack {
-                    ForEach($cartViewModel.purchases, id: \.id) { $purchase in
-                        CartCellView(purchase: $purchase)
-                    }
+        VStack(alignment: .leading) {
+            LazyVStack {
+                ForEach($cartViewModel.purchases, id: \.id) { $purchase in
+                    CartCellView(purchase: $purchase)
                 }
             }
             Spacer()
@@ -46,7 +44,7 @@ struct CartView: View {
                 }
                 .opacity(!shouldEnableOrderButton ? 0.5 : 1)
                 .disabled(!shouldEnableOrderButton)
-
+                
             }
         }
     }

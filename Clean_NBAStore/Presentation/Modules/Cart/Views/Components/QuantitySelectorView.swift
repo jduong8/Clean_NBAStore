@@ -10,15 +10,7 @@ import SwiftUI
 struct QuantitySelectorView: View {
     
     @Binding var purchase: Purchase
-
-    // MARK: - Computed Properties
-    var isMinusEnabled: Bool {
-        self.purchase.quantity > 1
-    }
-    
-    var isPlusEnabled: Bool {
-        self.purchase.quantity < 10
-    }
+    @EnvironmentObject var cartViewModel: CartViewModel
     
     // MARK: - Body
     var body: some View {
@@ -40,32 +32,22 @@ struct QuantitySelectorView_Previews: PreviewProvider {
 private extension QuantitySelectorView {
     
     var decrementButton: some View {
-        Button(action: decrementQuantity) {
+        Button {
+            self.cartViewModel.removeFromCart(for: purchase)
+        } label: {
             Image(systemName: "minus.circle")
         }
-        .disabled(!isMinusEnabled)
     }
     
     var incrementButton: some View {
-        Button(action: incrementQuantity) {
+        Button {
+            self.cartViewModel.addToCart(for: purchase)
+        } label: {
             Image(systemName: "plus.circle")
         }
-        .disabled(!isPlusEnabled)
     }
     
     var quantityText: some View {
         Text("\(self.purchase.quantity)")
-    }
-}
-
-// MARK: - Actions
-private extension QuantitySelectorView {
-    
-    func decrementQuantity() {
-        self.purchase.quantity = max(self.purchase.quantity - 1, 1)
-    }
-    
-    func incrementQuantity() {
-        self.purchase.quantity = min(self.purchase.quantity + 1, 10)
     }
 }

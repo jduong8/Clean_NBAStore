@@ -22,13 +22,15 @@ class CartViewModel: ObservableObject {
     // MARK: - Functions
     
     func addToCart(for purchase: Purchase) {
-        self.purchase = purchase
-        cartRepository.addToCart(purchase: self.purchase)
+        var localPurchase = purchase
+        localPurchase.quantity = min(localPurchase.quantity + 1, 10)
+        cartRepository.addToCart(purchase: localPurchase)
         self.purchases = cartRepository.getCartItems() // Mettre à jour les articles du panier
     }
     
     func removeFromCart(for purchase: Purchase) {
         self.purchase = purchase
+        self.purchase.quantity = max(self.purchase.quantity - 1, 0)
         cartRepository.removeFromCart(purchase: self.purchase)
         self.purchases = cartRepository.getCartItems() // Mettre à jour les articles du panier
     }
@@ -41,16 +43,5 @@ class CartViewModel: ObservableObject {
     
     var totalQuantity: Int {
         return purchases.map({ $0.quantity }).reduce(0, +)
-    }
-    
-    // MARK: - Quantity Selector
-    func isMinusEnabled(for purchase: Purchase) -> Bool {
-        self.purchase = purchase
-        return self.purchase.quantity > 1
-    }
-    
-    func isPlusEnabled(for purchase: Purchase) -> Bool {
-        self.purchase = purchase
-        return self.purchase.quantity < 10
     }
 }

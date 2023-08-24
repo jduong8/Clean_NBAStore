@@ -24,6 +24,7 @@ struct CartCellView: View {
                 Text(purchase.product.name)
                     .foregroundColor(.black)
                     .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 Text(purchase.product.shortDescription)
                     .foregroundColor(.black)
                     .font(.system(size: 15))
@@ -35,6 +36,7 @@ struct CartCellView: View {
                     .foregroundColor(.black)
             }
         }
+        .padding(.leading)
     }
 }
 
