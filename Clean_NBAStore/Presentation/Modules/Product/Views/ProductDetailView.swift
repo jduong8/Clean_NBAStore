@@ -64,7 +64,9 @@ extension ProductDetailView {
     
     var orderButton: some View {
         Button {
-            self.cartViewModel.addToCard(for: Purchase(product: product, size: selectedSize))
+            self.cartViewModel.addToCart(for: Purchase(
+                product: product,
+                size: selectedSize))
         } label: {
             Text("Buy in size \(selectedSize.rawValue.uppercased()) : \(price)")
                 .font(.title2)

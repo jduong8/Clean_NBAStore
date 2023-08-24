@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CartCellView: View {
     
-    @State var purchase: Purchase
+    @Binding var purchase: Purchase
     private var totalPrice: Double {
         purchase.product.price * Double(purchase.quantity)
     }
@@ -40,6 +40,6 @@ struct CartCellView: View {
 
 struct CartCellView_Previews: PreviewProvider {
     static var previews: some View {
-        CartCellView(purchase: .mockPurchase)
+        CartCellView(purchase: .constant(.mockPurchase))
     }
 }

@@ -11,22 +11,22 @@ struct CartView: View {
     
     @ObservedObject var cartViewModel: CartViewModel
     private var shouldEnableOrderButton: Bool {
-        self.cartViewModel.productQuantity > 0
+        self.cartViewModel.totalQuantity > 0
     }
     
     var body: some View {
         VStack {
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVStack {
-                    ForEach(cartViewModel.purchases) {
-                        CartCellView(purchase: $0)
+                    ForEach($cartViewModel.purchases, id: \.id) { $purchase in
+                        CartCellView(purchase: $purchase)
                     }
                 }
             }
             Spacer()
             VStack {
                 HStack {
-                    Text("Quantity: \(cartViewModel.productQuantity)")
+                    Text("Quantity: \(cartViewModel.totalQuantity)")
                     Spacer()
                     Text("Total:  \(cartViewModel.totalPrice, specifier: "%.2f") €")
                 }

@@ -25,4 +25,14 @@ extension Purchase {
             price: 99.99,
             imageName: "lebronIconic"
         ),size: .s)
+    static let initialPurchase = Purchase(
+        product: Product(
+            id: 0,
+            type: .tshirt,
+            name: "",
+            shortDescription: "",
+            description: "",
+            price: 0,
+            imageName: ""
+        ),size: .s)
 }

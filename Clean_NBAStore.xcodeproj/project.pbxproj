@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		13C067B02A94CEE0004FABD6 /* ProductType+Mappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C067AF2A94CEE0004FABD6 /* ProductType+Mappers.swift */; };
-		13C067B82A94E483004FABD6 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C067B72A94E483004FABD6 /* CartManager.swift */; };
 		13C067BB2A94E4D4004FABD6 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C067BA2A94E4D4004FABD6 /* Purchase.swift */; };
 		13C067BE2A94E60A004FABD6 /* ProductSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C067BD2A94E60A004FABD6 /* ProductSize.swift */; };
 		13C067C32A94E821004FABD6 /* QuantitySelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C067C22A94E821004FABD6 /* QuantitySelectorView.swift */; };
@@ -53,7 +52,6 @@
 
 /* Begin PBXFileReference section */
 		13C067AF2A94CEE0004FABD6 /* ProductType+Mappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductType+Mappers.swift"; sourceTree = "<group>"; };
-		13C067B72A94E483004FABD6 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		13C067BA2A94E4D4004FABD6 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		13C067BD2A94E60A004FABD6 /* ProductSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSize.swift; sourceTree = "<group>"; };
 		13C067C22A94E821004FABD6 /* QuantitySelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitySelectorView.swift; sourceTree = "<group>"; };
@@ -131,17 +129,8 @@
 				13C067C42A94EB07004FABD6 /* ViewModel */,
 				13C067BF2A94E7F4004FABD6 /* Views */,
 				13C067B92A94E4C4004FABD6 /* Model */,
-				13C067B62A94E414004FABD6 /* Protocol */,
 			);
 			path = Cart;
-			sourceTree = "<group>";
-		};
-		13C067B62A94E414004FABD6 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				13C067B72A94E483004FABD6 /* CartManager.swift */,
-			);
-			path = Protocol;
 			sourceTree = "<group>";
 		};
 		13C067B92A94E4C4004FABD6 /* Model */ = {
@@ -516,7 +505,6 @@
 				13D050832A94AFD9004223B2 /* ProductTypeDTO.swift in Sources */,
 				13C067D72A95FAA9004FABD6 /* Utils.swift in Sources */,
 				13D050902A94B873004223B2 /* ProductType.swift in Sources */,
-				13C067B82A94E483004FABD6 /* CartManager.swift in Sources */,
 				13C067E62A96098A004FABD6 /* CartRepositoryDefault.swift in Sources */,
 				13D0508B2A94B7F7004223B2 /* ProductRepository.swift in Sources */,
 				13C067CA2A94F294004FABD6 /* CartView.swift in Sources */,
