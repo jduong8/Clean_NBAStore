@@ -32,9 +32,10 @@ class ViewModelCartTests: XCTestCase {
         viewModel.addToCart(for: initialPurchase)
         viewModel.addToCart(for: secondPurchase)
 
-        let cartItems = viewModel.purchases
+        let cartItems = viewModel.cart
         XCTAssertNotNil(cartItems)
         XCTAssertEqual(cartItems.count, 2)
+        XCTAssertEqual(cartItems[0].product,  Product(id: 0, type: .hat, name: "Some Hat", shortDescription: "", description: "", price: 0, imageName: ""))
         XCTAssertEqual(cartItems.first?.quantity, 2) // Car j'ajoute 2 fois le même produit dans le panier
     }
 
@@ -42,7 +43,7 @@ class ViewModelCartTests: XCTestCase {
         let initialPurchase = Purchase(quantity: 1, product: Product(id: 0, type: .hat, name: "Some Hat", shortDescription: "", description: "", price: 0, imageName: ""), size: .m)
         viewModel.addToCart(for: initialPurchase)
         
-        let cartItems = viewModel.purchases
+        let cartItems = viewModel.cart
         viewModel.removeFromCart(for: initialPurchase)
         
         XCTAssertNotNil(cartItems)
@@ -55,7 +56,7 @@ class ViewModelCartTests: XCTestCase {
         viewModel.addToCart(for: initialPurchase)
 
         viewModel.removeFromCart(for: initialPurchase)
-        let cartItems = viewModel.purchases
+        let cartItems = viewModel.cart
         XCTAssertNotNil(cartItems)
         XCTAssertEqual(cartItems.count, 0)
     }

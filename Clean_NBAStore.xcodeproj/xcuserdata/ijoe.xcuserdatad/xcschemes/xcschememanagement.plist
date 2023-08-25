@@ -6,8 +6,23 @@
 	<dict>
 		<key>Clean_NBAStore.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>13C067DB2A960941004FABD6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>13D0505D2A94A258004223B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

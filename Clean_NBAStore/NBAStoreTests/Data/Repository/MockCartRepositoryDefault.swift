@@ -9,7 +9,7 @@ import Foundation
 
 class MockCartRepositoryDefault: MockCartRepository {
     
-    private var cart: [Purchase] = []
+    var cart: [Purchase] = []
     
     func addToCart(purchase: Purchase) {
         if let index = cart.firstIndex(where: { $0.product.id == purchase.product.id && $0.size == purchase.size }) {
