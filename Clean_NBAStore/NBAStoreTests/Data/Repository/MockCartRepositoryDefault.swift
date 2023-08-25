@@ -21,7 +21,6 @@ class MockCartRepositoryDefault: MockCartRepository {
         }
     }
 
-    
     func removeFromCart(purchase: Purchase) {
         if let index = cart.firstIndex(where: { $0.product.id == purchase.product.id && $0.size == purchase.size }) {
             let oldPurchase = cart[index]
@@ -34,7 +33,6 @@ class MockCartRepositoryDefault: MockCartRepository {
             }
         }
     }
-
     
     func getCartItems() -> [Purchase] {
         return cart

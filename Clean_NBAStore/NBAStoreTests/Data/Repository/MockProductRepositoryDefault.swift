@@ -9,15 +9,20 @@ import Foundation
 
 class MockProductRepositoryDefault: MockProductRepository {
     
-    let api: API
-    
-    init(api: API = .init()) {
-        self.api = api
-    }
+    var mockProducts: [Product] = []
+    var errorToThrow: ProductError?
     
     func getAllProducts() throws -> [Product] {
-        return try self.api.getProductsData().map {
-            try Product(with: $0)
+        if let error = errorToThrow {
+            throw error
         }
+        return mockProducts
+    }
+}
+
+extension MockProductRepositoryDefault {
+    enum ProductError: Error {
+        case noProductsAvailable
+        case networkError
     }
 }

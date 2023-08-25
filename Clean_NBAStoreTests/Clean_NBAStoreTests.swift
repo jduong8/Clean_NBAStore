@@ -5,31 +5,47 @@
 //  Created by Jonathan Duong on 23/08/2023.
 //
 
+@testable import Clean_NBAStore
 import XCTest
 
 final class Clean_NBAStoreTests: XCTestCase {
 
+    var mockRepo: MockProductRepositoryDefault!
+    var viewModel: ViewModelProductListTests!
+
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        mockRepo = MockProductRepositoryDefault()
+        viewModel = ViewModelProductListTests(mockProductRepository: mockRepo)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        mockRepo = nil
+        viewModel = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testViewModelProductsReturnsExpectedValue() throws {
+        let mockProduct1 = Product(id: 0, type: .hat, name: "Some Hat", shortDescription: "", description: "", price: 0, imageName: "")
+        let mockProduct2 = Product(id: 1, type: .short, name: "Some Short", shortDescription: "", description: "", price: 19.99, imageName: "")
+        mockRepo.mockProducts = [mockProduct1, mockProduct2]
+        
+        let result = viewModel.products
+
+        XCTAssertEqual(result, [mockProduct1, mockProduct2])
+    }
+    
+    func testViewModelProductsReturnsEmptyArrayWhenNoProductsAvailable() throws {
+        mockRepo.errorToThrow = .noProductsAvailable
+
+        let result = viewModel.products
+
+        XCTAssertTrue(result.isEmpty)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+    func testViewModelProductsReturnsEmptyArrayWhenError() throws {
+        mockRepo.errorToThrow = .networkError
 
+        let result = viewModel.products
+
+        XCTAssertTrue(result.isEmpty)
+    }
 }
