@@ -20,23 +20,19 @@ class CartViewModel: ObservableObject {
     }
     
     // MARK: - Functions
-    
     func addToCart(for purchase: Purchase) {
-        var localPurchase = purchase
-        localPurchase.quantity = min(localPurchase.quantity + 1, 10)
+        let localPurchase = purchase
         cartRepository.addToCart(purchase: localPurchase)
         self.purchases = cartRepository.getCartItems() // Mettre à jour les articles du panier
     }
     
     func removeFromCart(for purchase: Purchase) {
         self.purchase = purchase
-        self.purchase.quantity = max(self.purchase.quantity - 1, 0)
         cartRepository.removeFromCart(purchase: self.purchase)
         self.purchases = cartRepository.getCartItems() // Mettre à jour les articles du panier
     }
     
     // MARK: - Display price and quantity
-    
     var totalPrice: Double {
         return purchases.map({ $0.product.price * Double($0.quantity) }).reduce(0, +)
     }

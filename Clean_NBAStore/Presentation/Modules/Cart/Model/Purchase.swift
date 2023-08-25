@@ -9,7 +9,7 @@ import Foundation
 
 struct Purchase: Identifiable {
     let id = UUID()
-    var quantity: Int = 0
+    var quantity: Int = 1
     let product: Product
     var size: ProductSize
 }

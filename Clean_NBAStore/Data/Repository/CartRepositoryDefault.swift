@@ -14,7 +14,7 @@ class CartRepositoryDefault: CartRepository {
     func addToCart(purchase: Purchase) {
         if let index = cart.firstIndex(where: { $0.product.id == purchase.product.id && $0.size == purchase.size }) {
             let oldPurchase = cart[index]
-            let newPurchase = Purchase(quantity: oldPurchase.quantity + 1, product: oldPurchase.product, size: oldPurchase.size)  // +1 au lieu de + purchase.quantity
+            let newPurchase = Purchase(quantity: oldPurchase.quantity + 1, product: oldPurchase.product, size: oldPurchase.size)
             cart[index] = newPurchase
         } else {
             cart.append(purchase)

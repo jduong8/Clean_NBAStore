@@ -27,13 +27,15 @@ class ViewModelCartTests: XCTestCase {
 
     func testAddToCart() {
         let initialPurchase = Purchase(quantity: 1, product: Product(id: 0, type: .hat, name: "Some Hat", shortDescription: "", description: "", price: 0, imageName: ""), size: .m)
+        let secondPurchase = Purchase(quantity: 5, product: Product(id: 3, type: .short, name: "Some Short", shortDescription: "", description: "", price: 0, imageName: ""), size: .m)
         viewModel.addToCart(for: initialPurchase)
         viewModel.addToCart(for: initialPurchase)
+        viewModel.addToCart(for: secondPurchase)
 
         let cartItems = viewModel.purchases
         XCTAssertNotNil(cartItems)
-        XCTAssertEqual(cartItems.count, 1)
-        XCTAssertEqual(cartItems.first?.quantity, 2)  // Car dans MockCartRepositoryDefault.addToCart, on ajoute +1 à la quantité
+        XCTAssertEqual(cartItems.count, 2)
+        XCTAssertEqual(cartItems.first?.quantity, 2) // Car j'ajoute 2 fois le même produit dans le panier
     }
 
     func testRemoveFromCart() {
@@ -45,7 +47,7 @@ class ViewModelCartTests: XCTestCase {
         
         XCTAssertNotNil(cartItems)
         XCTAssertEqual(cartItems.count, 1)
-        XCTAssertEqual(cartItems[0].quantity, 1)
+        XCTAssertEqual(cartItems.first?.quantity, 1)
     }
 
     func testRemoveFromCartWhenQuantityIsZero() {
@@ -54,7 +56,6 @@ class ViewModelCartTests: XCTestCase {
 
         viewModel.removeFromCart(for: initialPurchase)
         let cartItems = viewModel.purchases
-        print(cartItems.count)
         XCTAssertNotNil(cartItems)
         XCTAssertEqual(cartItems.count, 0)
     }
